@@ -1,15 +1,253 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<style>
-h1 {text-align: center;}
-p {text-align: center;}
-div {text-align: center;}
-</style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Meet GAIL</title>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;800&family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet" />
+  <style>
+    /* ======  COLOR PALETTE  ====== */
+    :root {
+      --bg: #fdf7ed;            /* Creamy background */
+      --accent-teal: #009ea6;   /* Bright teal */
+      --accent-coral: #e3887f;  /* Warm coral */
+      --accent-brown: #4a2a21;  /* Deep brown */
+    }
+
+    /* ======  RESET & GLOBAL  ====== */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: var(--bg);
+      font-family: "Montserrat", Arial, sans-serif;
+      color: var(--accent-teal);
+      line-height: 1.5;
+    }
+
+    h1 {
+      font-family: "Orbitron", sans-serif;
+      font-size: 4rem;
+      letter-spacing: 0.1rem;
+      color: var(--accent-coral);
+      text-shadow: 3px 3px 0 rgba(0, 0, 0, 0.25);
+    }
+
+    /* ======  HERO  ====== */
+    .hero {
+      position: relative;
+      padding: 3rem 1rem 6rem;
+      text-align: center;
+      overflow: hidden; /* clip diagonal stripes */
+    }
+
+    /* diagonal brown stripe */
+    .hero::before,
+    .hero::after {
+      content: "";
+      position: absolute;
+      width: 200%;
+      height: 2.8rem;
+      left: -50%;
+      top: 3.5rem;
+      background: var(--accent-brown);
+      transform: rotate(-20deg);
+      z-index: -2;
+    }
+
+    /* diagonal teal stripe */
+    .hero::after {
+      height: 1.5rem;
+      background: var(--accent-teal);
+      top: 5.3rem;
+    }
+
+    /* avatar badge */
+    .avatar {
+      width: 220px;
+      height: 220px;
+      border-radius: 50%;
+      border: 8px solid var(--accent-coral);
+      margin: 2rem auto;
+      background: url("img/GAIL.png") center / cover no-repeat;
+      position: relative;
+      z-index: 2; /* sit above stripes */
+    }
+
+    /* tagline */
+    .tagline {
+      font-size: 2rem;
+      font-weight: 700;
+      max-width: 12rem;
+      margin: 1rem auto 0;
+    }
+    .tagline strong {
+      color: #000;
+    }
+    .learn-more {
+      font-size: 0.75rem;
+      letter-spacing: 0.05em;
+      display: block;
+      margin-top: 0.25rem;
+    }
+
+    /* ======  FEATURE CARDS  ====== */
+    .features {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+      padding: 4rem 1rem;
+    }
+
+    .feature-card {
+      width: 260px;
+      max-width: 90%;
+      padding: 2rem 1.5rem;
+      text-align: center;
+      border: 3px solid var(--accent-brown);
+      border-radius: 12px;
+      background: #fff;
+    }
+    .feature-card {
+      width: 260px;
+      max-width: 90%;
+      padding: 2rem 1.5rem;
+      text-align: center;
+      border: 3px solid var(--accent-brown);
+      border-radius: 12px;
+      background: #fff;
+    }
+
+    .feature-card:nth-child(1) {
+      border-color: var(--accent-brown);
+    }
+    
+
+    .feature-card h3 {
+      margin: 1rem 0 0.5rem;
+      font-size: 1.1rem;
+      letter-spacing: 0.04rem;
+      text-transform: uppercase;
+    }
+
+    .feature-card p {
+      font-size: 0.9rem;
+      color: #333;
+      line-height: 1.35rem;
+    }
+
+    /* icons */
+    .icon {
+      width: 64px;
+      height: 64px;
+      margin: 0 auto;
+      stroke: var(--accent-teal);
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+    .feature-card:nth-child(1) .icon {
+      stroke: var(--accent-teal);
+    }
+
+    /* ======  CALL‑TO‑ACTION  ====== */
+    .cta-wrap {
+      background: linear-gradient(transparent 0%, var(--accent-brown) 25%, var(--accent-brown) 100%);
+      padding: 6rem 1rem 4rem;
+      text-align: center;
+    }
+
+    .cta {
+      display: inline-block;
+      padding: 1rem 2rem;
+      background: var(--accent-teal);
+      color: var(--bg);
+      font-family: "Orbitron", sans-serif;
+      font-size: 2rem;
+      border-radius: 60px;
+      text-decoration: none;
+      box-shadow: 0 6px 0 #03757c;
+      transition: transform 0.1s ease, box-shadow 0.1s ease;
+    }
+    .cta:active {
+      transform: translateY(4px);
+      box-shadow: 0 2px 0 #03757c;
+    }
+
+    /* ======  RESPONSIVE  ====== */
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 2.7rem;
+      }
+      .tagline {
+        font-size: 1.5rem;
+      }
+    }
+  </style>
 </head>
 <body>
+  <section class="hero">
+    <h1>MEET GAIL</h1>
+    <div class="avatar"></div>
+    <div class="tagline">One bot that<br />does it <strong>all.</strong></div>
+    <span class="learn-more">LEARN MORE ⓘ</span>
+  </section>
 
-<h1>animetiddi.es</h1>
+  <section class="features">
+    <!-- Feature 1 -->
+    <div class="feature-card">
+      <svg class="icon" viewBox="0 0 24 24" fill="none" stroke-width="2">
+        <!-- Paper plane with lightning bolt -->
+        <path d="M2 12L22 2l-5 20-6-6-4 4z" />
+        <path d="M12 22l4-10" />
+      </svg>
+      <h3>A TELEGRAM<br />BOT MADE<br />SMART</h3>
+      <p>
+        GAIL for Telegram pipes the full power of GAIL5's AI straight into Telegram,
+        letting users chat, draw pictures, and transcribe voice messages without
+        ever leaving their favourite messaging app.
+      </p>
+    </div>
 
+    <!-- Feature 2 -->
+    <div class="feature-card">
+      <svg class="icon" viewBox="0 0 24 24" fill="none" stroke-width="2">
+        <!-- Shield + hammer -->
+        <path d="M12 2l7 4v6c0 5-3.134 9.363-7 10-3.866-.637-7-5-7-10V6l7-4z" />
+        <path d="M9 11l3 3 3-3M12 14V8" />
+      </svg>
+      <h3>EFFORTLESS<br />GROUP<br />MANAGEMENT</h3>
+      <p>
+        Kick, ban or mute trouble‑makers in one command; cut pesky scam bots down
+        with a captcha on join; GAIL for Telegram gives admins every major
+        moderation tool in the same place they chat.
+      </p>
+    </div>
+
+    <!-- Feature 3 -->
+    <div class="feature-card">
+      <svg class="icon" viewBox="0 0 24 24" fill="none" stroke-width="2">
+        <!-- Download with finger/arrow -->
+        <path d="M12 3v13" />
+        <path d="M7 12l5 5 5-5" />
+        <circle cx="12" cy="19" r="2" />
+        <path d="M4 6h16" />
+      </svg>
+      <h3>NO‑FUSS<br />VIDEO<br />DOWNLOADING</h3>
+      <p>
+        Grab <em>any</em> online video for quick re‑share from your favorite sites
+        like BitChute, TikTok, and YouTube! Always 100% channel advertisement
+        free! (We're looking at you, other downloader bots.)
+      </p>
+    </div>
+  </section>
+
+  <section class="cta-wrap">
+    <a href="https://t.me/GAIL5Bot" class="cta">FIND ME ON TELEGRAM</a>
+  </section>
 </body>
 </html>
