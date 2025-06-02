@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>About GAIL - Your AI Assistant</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;800&family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #fdf7ed;
+      --accent-teal: #009ea6;
+      --accent-coral: #e3887f;
+      --accent-brown: #4a2a21;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: var(--bg);
+      font-family: "Montserrat", Arial, sans-serif;
+      color: var(--accent-brown);
+      line-height: 1.6;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 2rem 1rem;
+    }
+
+    .header {
+      text-align: center;
+      margin-bottom: 3rem;
+      padding-bottom: 2rem;
+      border-bottom: 3px solid var(--accent-coral);
+    }
+
+    h1 {
+      font-family: "Orbitron", sans-serif;
+      font-size: 3rem;
+      color: var(--accent-coral);
+      margin-bottom: 0.5rem;
+      text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.1);
+    }
+
+    .subtitle {
+      font-size: 1.2rem;
+      color: var(--accent-teal);
+      font-weight: 600;
+    }
+
+    .back-link {
+      display: inline-block;
+      margin-bottom: 2rem;
+      color: var(--accent-teal);
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.2s ease;
+    }
+    .back-link:hover {
+      color: var(--accent-coral);
+    }
+
+    .qa-section {
+      margin-bottom: 2rem;
+    }
+
+    .question {
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: var(--accent-teal);
+      margin-bottom: 0.8rem;
+      border-left: 4px solid var(--accent-coral);
+      padding-left: 1rem;
+    }
+
+    .answer {
+      margin-bottom: 2rem;
+      padding-left: 1.5rem;
+    }
+
+    .answer p {
+      margin-bottom: 1rem;
+    }
+
+    .answer ul {
+      margin-left: 1.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .answer li {
+      margin-bottom: 0.5rem;
+    }
+
+    .highlight {
+      background: linear-gradient(120deg, var(--accent-coral) 0%, var(--accent-coral) 100%);
+      background-repeat: no-repeat;
+      background-size: 100% 0.3em;
+      background-position: 0 88%;
+      font-weight: 600;
+    }
+
+    .cta-section {
+      background: var(--accent-brown);
+      color: var(--bg);
+      padding: 2rem;
+      border-radius: 12px;
+      text-align: center;
+      margin-top: 3rem;
+    }
+
+    .cta-button {
+      display: inline-block;
+      padding: 1rem 2rem;
+      background: var(--accent-teal);
+      color: var(--bg);
+      font-family: "Orbitron", sans-serif;
+      font-size: 1.2rem;
+      border-radius: 30px;
+      text-decoration: none;
+      margin-top: 1rem;
+      transition: transform 0.1s ease;
+    }
+    .cta-button:hover {
+      transform: translateY(-2px);
+    }
+
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 2.2rem;
+      }
+      .container {
+        padding: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <a href="index.html" class="back-link">← Back to Home</a>
+    
+    <div class="header">
+      <h1>About GAIL</h1>
+      <p class="subtitle">Everything you need to know about your new favorite Telegram assistant</p>
+    </div>
+
+    <div class="qa-section">
+      <div class="question">What is GAIL?</div>
+      <div class="answer">
+        <p>GAIL is a <span class="highlight">powerful AI assistant</span> built specifically for Telegram. Unlike basic chatbots, GAIL combines advanced AI capabilities with practical group management tools and media downloading features, all in one convenient package.</p>
+      </div>
+    </div>
+
+    <div class="qa-section">
+      <div class="question">What can GAIL do for me?</div>
+      <div class="answer">
+        <p>GAIL offers three main categories of features:</p>
+        <ul>
+          <li><strong>AI Assistance:</strong> Chat with advanced AI, generate images, transcribe voice messages. Soon to come will be the ability to ask Gail to execute commands in plain English!</li>
+          <li><strong>Group Management:</strong> Kick, ban, mute users, set up captchas, moderate discussions</li>
+          <li><strong>Media Tools:</strong> Download videos from YouTube, TikTok, BitChute, and more</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="qa-section">
+      <div class="question">How is GAIL different from other Telegram bots?</div>
+      <div class="answer">
+        <p>Most Telegram bots are designed to do one thing. Some of them do their one thing well, and others do a terrible job of the one thing they are designed to do. GAIL does <span class="highlight">everything you need</span>, allowing you to moderate your group, enjoy fun AI features, and download videos without cluttering your group with multiple bots that all conflict with each other</p>
+        <ul>
+          <li>No need to add multiple bots to your groups</li>
+          <li>Powered by a cutting-edge load balancing framework (GAIL5) that allows for a massive variety of AI features to be ran within a single Telegram bot.</li>
+          <li>100% ad-free video downloads - Don't worry, we hate those bots that ask you to follow their channels to use them too.</li>
+          <li>Intuitive commands and revolutionary help menu that actually make sense</li>
+          <li>Built by one passionate developer who actually uses Telegram daily and wants to supercharge everyones' Telegram experience.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="qa-section">
+      <div class="question">Is GAIL free to use?</div>
+      <div class="answer">
+        <p>Yes! The vast majority of features available from GAIL are free to use. Currently, the ability to enable auto-transcription for voice messages, and the ability to generate pictures are donor-only features. Much of the restriction behind these features is related to hardware limitations on Gail's server, and every donation massively helps me to further develop a more powerful version of Gail - I absolutely have plans to make an image generator that is free to use when Gail has the hardware capabilities to do so! I believe powerful AI tools and the right to a crypto scam bot-free chat should be available for everyone.</p>
+        <p><a href="donor-info.html" style="color: var(--accent-teal); font-weight: 600; text-decoration: none;">→ Learn more about donor features and how to support GAIL's development</a></p>
+      </div>
+    </div>
+
+    <div class="qa-section">
+      <div class="question">How do I add GAIL to my group?</div>
+      <div class="answer">
+        <p>Simply search for <strong>@GAIL5Bot</strong> in Telegram and add it to your group. Make sure to give it admin permissions if you want to use the moderation features.</p>
+      </div>
+    </div>
+
+    <div class="qa-section">
+      <div class="question">What video sites does GAIL support?</div>
+      <div class="answer">
+        <p>GAIL can download from most major video platforms including:</p>
+        <ul>
+          <li>YouTube</li>
+          <li>TikTok</li>
+          <li>BitChute</li>
+          <li>Twitter/X</li>
+          <li>Instagram</li>
+          <li>Rumble</li>
+          <li>Instagram</li>
+          <li>And many more!</li>
+        </ul>
+        <p>Unlike other download bots, GAIL's downloads are <span class="highlight">100% advertisement-free</span>.</p>
+      </div>
+    </div>
+
+    <div class="qa-section">
+      <div class="question">Can GAIL help with group moderation?</div>
+      <div class="answer">
+        <p>Absolutely! GAIL includes professional-grade moderation tools:</p>
+        <ul>
+          <li>Automatic captcha verification for new members</li>
+          <li>Quick kick, ban, and mute commands</li>
+          <li>Spam detection and removal</li>
+          <li>Customizable auto-moderation rules</li>
+          <li>User warning systems - You can warn Gail too if she pisses you off but she won't kick herself.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="qa-section">
+      <div class="question">How smart is GAIL's AI?</div>
+      <div class="answer">
+        <p>GAIL isn't just one AI - it's a <span class="highlight">sophisticated network of specialized AI modules</span> that work together through a single Telegram bot interface. Think of it as having multiple AI experts collaborating behind the scenes:</p>
+        <ul>
+          <li><strong>Chat AI:</strong> Powered by Nous-Hermes 2 for natural conversations (currently chat-only for safety)</li>
+          <li><strong>Image Generation AI:</strong> Powered by Stable Diffusion 1.5, Gail can generate high-quality images from text descriptions. Support for FLUX Schnell, a cutting-edge image-generator, is coming very soon!</li>
+          <li><strong>Voice Transcription AI:</strong> Accurately converts voice messages to text</li>
+          <li><strong>Moderation System:</strong> Traditional rule-based commands for reliable group management - Forbid certain words or links from your group to cut down on spam or inappropriate discussion, and warn users with a complex disciplinary system that allows for the best user-moderator relationship possible.</li>
+        </ul>
+        <p>Each AI module shares awareness of what's happening in your Telegram conversations, creating a seamless experience where GAIL understands context across different types of interactions.</p>
+        <p><em>Note: GAIL can sometimes be quirky or go off the rails as it is under active development - consider that it is part of its charm! The chat AI is intentionally separated from moderation commands for safety.</em></p>
+    </div>
+    </div>
+
+    <div class="qa-section">
+      <div class="question">What's coming next for GAIL?</div>
+      <div class="answer">
+        <p>The most exciting feature in development is a <span class="highlight">natural language processor</span> that will revolutionize how you interact with GAIL:</p>
+        <ul>
+          <li>Instead of remembering specific commands, just tell GAIL what you want in plain English - a completely unparalleled experience you won't find in any other Telegram bot.</li>
+          <li>"Hey GAIL, kick that spammer" or "GAIL, download that YouTube video"</li>
+          <li>The system will understand your intent, ask you for confirmation, and execute the appropriate action</li>
+          <li>This will bridge the gap between GAIL's conversational AI and its practical functions</li>
+        </ul>
+        <p>This feature is currently in development and will make GAIL feel more like talking to a helpful human assistant rather than operating a traditional bot.</p>
+      </div>
+    </div>
+
+    <div class="qa-section">
+      <div class="question">Why did you separate the chat AI from moderation?</div>
+      <div class="answer">
+        <p>Safety first! While GAIL's chat AI is fantastic for conversations, AI can be unpredictable. By keeping the chat AI separate from moderation commands, we ensure that:</p>
+        <ul>
+          <li>GAIL won't accidentally kick or ban users during normal conversation</li>
+          <li>Moderation actions require deliberate commands from authorized users</li>
+          <li>You can enjoy GAIL's personality without worrying about unintended consequences</li>
+          <li>The upcoming natural language processor will add a safe bridge between these systems</li>
+        </ul>
+        <p>This design gives you the best of both worlds: reliable moderation tools and an engaging AI companion.</p>
+      </div>
+    </div>
+
+    <div class="cta-section">
+      <h2>Ready to experience the future of Telegram bots?</h2>
+      <p>Join hundreds of users who've already discovered what GAIL can do.</p>
+      <a href="https://t.me/GAIL5Bot" class="cta-button">Start Chatting with GAIL</a>
+    </div>
+  </div>
+</body>
+</html>

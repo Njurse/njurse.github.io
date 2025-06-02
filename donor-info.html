@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>GAIL Donor Features - Support Development</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;800&family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #fdf7ed;
+      --accent-teal: #009ea6;
+      --accent-coral: #e3887f;
+      --accent-brown: #4a2a21;
+      --accent-gold: #d4af37;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: var(--bg);
+      font-family: "Montserrat", Arial, sans-serif;
+      color: var(--accent-brown);
+      line-height: 1.6;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 2rem 1rem;
+    }
+
+    .header {
+      text-align: center;
+      margin-bottom: 3rem;
+      padding-bottom: 2rem;
+      border-bottom: 3px solid var(--accent-coral);
+    }
+
+    h1 {
+      font-family: "Orbitron", sans-serif;
+      font-size: 3rem;
+      color: var(--accent-coral);
+      margin-bottom: 0.5rem;
+      text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.1);
+    }
+
+    .subtitle {
+      font-size: 1.2rem;
+      color: var(--accent-teal);
+      font-weight: 600;
+    }
+
+    .back-link {
+      display: inline-block;
+      margin-bottom: 2rem;
+      color: var(--accent-teal);
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.2s ease;
+    }
+    .back-link:hover {
+      color: var(--accent-coral);
+    }
+
+    .comparison-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+      margin-bottom: 3rem;
+    }
+
+    .feature-column {
+      background: white;
+      border-radius: 12px;
+      padding: 2rem;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      border: 3px solid transparent;
+    }
+
+    .free-column {
+      border-color: var(--accent-teal);
+    }
+
+    .donor-column {
+      border-color: var(--accent-gold);
+      background: linear-gradient(135deg, #fff 0%, #fefcf5 100%);
+    }
+
+    .column-header {
+      text-align: center;
+      margin-bottom: 1.5rem;
+    }
+
+    .column-title {
+      font-family: "Orbitron", sans-serif;
+      font-size: 1.8rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .free-title {
+      color: var(--accent-teal);
+    }
+
+    .donor-title {
+      color: var(--accent-gold);
+    }
+
+    .column-subtitle {
+      font-size: 1rem;
+      opacity: 0.8;
+    }
+
+    .feature-list {
+      list-style: none;
+      margin-bottom: 2rem;
+    }
+
+    .feature-item {
+      margin-bottom: 1rem;
+      padding: 0.8rem;
+      border-radius: 8px;
+      background: var(--bg);
+      display: flex;
+      align-items: flex-start;
+      gap: 0.8rem;
+    }
+
+    .feature-icon {
+      font-size: 1.2rem;
+      margin-top: 0.1rem;
+    }
+
+    .free-icon {
+      color: var(--accent-teal);
+    }
+
+    .donor-icon {
+      color: var(--accent-gold);
+    }
+
+    .feature-text {
+      flex: 1;
+    }
+
+    .feature-name {
+      font-weight: 600;
+      margin-bottom: 0.3rem;
+    }
+
+    .feature-description {
+      font-size: 0.9rem;
+      opacity: 0.8;
+    }
+
+    .donor-badge {
+      background: var(--accent-gold);
+      color: white;
+      padding: 0.2rem 0.6rem;
+      border-radius: 12px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      text-transform: uppercase;
+    }
+
+    .why-donate {
+      background: var(--accent-brown);
+      color: var(--bg);
+      padding: 2rem;
+      border-radius: 12px;
+      margin-bottom: 2rem;
+    }
+
+    .why-donate h2 {
+      font-family: "Orbitron", sans-serif;
+      margin-bottom: 1rem;
+      color: var(--accent-coral);
+    }
+
+    .cta-section {
+      background: linear-gradient(135deg, var(--accent-gold) 0%, #b8941f 100%);
+      color: white;
+      padding: 2rem;
+      border-radius: 12px;
+      text-align: center;
+    }
+
+    .cta-button {
+      display: inline-block;
+      padding: 1rem 2rem;
+      background: var(--accent-brown);
+      color: var(--bg);
+      font-family: "Orbitron", sans-serif;
+      font-size: 1.2rem;
+      border-radius: 30px;
+      text-decoration: none;
+      margin-top: 1rem;
+      transition: transform 0.1s ease;
+    }
+    .cta-button:hover {
+      transform: translateY(-2px);
+    }
+
+    @media (max-width: 768px) {
+      .comparison-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+      }
+      h1 {
+        font-size: 2.2rem;
+      }
+      .container {
+        padding: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <a href="info.html" class="back-link">← Back to About GAIL</a>
+    
+    <div class="header">
+      <h1>GAIL Donor Features</h1>
+      <p class="subtitle">Support GAIL's development and unlock premium AI capabilities</p>
+    </div>
+
+    <div class="comparison-grid">
+      <div class="feature-column free-column">
+        <div class="column-header">
+          <h2 class="column-title free-title">GAIL Free</h2>
+          <p class="column-subtitle">Everything you need for daily use</p>
+        </div>
+        
+        <ul class="feature-list">
+          <li class="feature-item">
+            <span class="feature-icon free-icon">💬</span>
+            <div class="feature-text">
+              <div class="feature-name">AI Chat</div>
+              <div class="feature-description">Unlimited conversations with Nous-Hermes 2 AI</div>
+            </div>
+          </li>
+          
+          <li class="feature-item">
+            <span class="feature-icon free-icon">🛡️</span>
+            <div class="feature-text">
+              <div class="feature-name">Full Moderation Suite</div>
+              <div class="feature-description">Kick, ban, mute, captcha, spam detection, warning systems</div>
+            </div>
+          </li>
+          
+          <li class="feature-item">
+            <span class="feature-icon free-icon">📥</span>
+            <div class="feature-text">
+              <div class="feature-name">Video Downloads</div>
+              <div class="feature-description">YouTube, TikTok, Twitter/X, Instagram, BitChute & more</div>
+            </div>
+          </li>
+          
+          <li class="feature-item">
+            <span class="feature-icon free-icon">🎯</span>
+            <div class="feature-text">
+              <div class="feature-name">Manual Voice Transcription</div>
+              <div class="feature-description">Use /transcribe command on voice messages</div>
+            </div>
+          </li>
+          
+          <li class="feature-item">
+            <span class="feature-icon free-icon">📚</span>
+            <div class="feature-text">
+              <div class="feature-name">All Core Features</div>
+              <div class="feature-description">Help system, user management, custom commands</div>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <div class="feature-column donor-column">
+        <div class="column-header">
+          <h2 class="column-title donor-title">GAIL Donor</h2>
+          <p class="column-subtitle">Premium AI features + support development</p>
+          <div style="background: var(--accent-gold); color: white; padding: 0.5rem 1rem; border-radius: 20px; font-weight: 600; margin-top: 1rem; font-size: 0.9rem;">
+            $5 for 30 days access
+          </div>
+        </div>
+        
+        <ul class="feature-list">
+          <li class="feature-item">
+            <span class="feature-icon donor-icon">✨</span>
+            <div class="feature-text">
+              <div class="feature-name">Everything in Free <span class="donor-badge">Plus</span></div>
+              <div class="feature-description">All free features remain available</div>
+            </div>
+          </li>
+          
+          <li class="feature-item">
+            <span class="feature-icon donor-icon">🎨</span>
+            <div class="feature-text">
+              <div class="feature-name">AI Image Generation</div>
+              <div class="feature-description">Create images from text with Stable Diffusion 1.5</div>
+            </div>
+          </li>
+          
+          <li class="feature-item">
+            <span class="feature-icon donor-icon">🎤</span>
+            <div class="feature-text">
+              <div class="feature-name">Auto Voice Transcription</div>
+              <div class="feature-description">A toggle for automatic transcription of all voice messages</div>
+            </div>
+          </li>
+          
+          <li class="feature-item">
+            <span class="feature-icon donor-icon">⚡</span>
+            <div class="feature-text">
+              <div class="feature-name">Priority Processing</div>
+              <div class="feature-description">Faster response times during high usage</div>
+            </div>
+          </li>
+          
+          <li class="feature-item">
+            <span class="feature-icon donor-icon">🚀</span>
+            <div class="feature-text">
+              <div class="feature-name">Early Access</div>
+              <div class="feature-description">First access to new features like the upcoming FLUX Schnell image generator</div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="why-donate">
+      <h2>Why Support GAIL's Development?</h2>
+      <p><strong>GAIL is built by one passionate developer</strong> who believes powerful AI tools should be accessible to everyone. Your donations directly fund:</p>
+      <ul style="margin: 1rem 0; margin-left: 1.5rem;">
+        <li><strong>Better Hardware:</strong> More powerful servers mean faster responses and new AI capabilities</li>
+        <li><strong>Advanced AI Models:</strong> Upcoming cutting-edge models like FLUX Schnell for image generation</li>
+        <li><strong>Free Feature Expansion:</strong> Goal is to make more features free as hardware improves</li>
+        <li><strong>Zero Ads:</strong> GAIL will never show ads or require channel subscriptions</li>
+        <li><strong>Continuous Development:</strong> Regular updates, bug fixes, and new features</li>
+      </ul>
+      <p><em>Current restrictions on image generation and auto-transcription are purely due to hardware limitations, not profit motives. Every donation helps remove these barriers!</em></p>
+    </div>
+
+    <div class="cta-section">
+      <h2>Ready to Support GAIL?</h2>
+      <p>Currently <strong>$5 for 30 days</strong> of donor access - more flexible options coming very soon!</p>
+      <p style="margin-bottom: 1rem; font-size: 0.9rem; opacity: 0.9;">Join the donors helping to build the future of Telegram AI assistance</p>
+      <a href="https://t.me/GAIL5Bot" class="cta-button">Contact GAIL for Donor Info</a>
+    </div>
+  </div>
+</body>
+</html>
